@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+tools:context="ro.pub.cs.systems.eim.practicaltest01Var08.PracticalTest01Var08SecundaryActivity">
+
+<EditText
+    android:id="@+id/up_left_edit_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:ems="7"
+    android:enabled="false"
+    android:gravity="center"
+    android:inputType="text"
+    android:saveEnabled="false" />
+
+<EditText
+    android:id="@+id/up_right_edit_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:saveEnabled="false"
+    android:enabled="false"
+    android:inputType="text"
+    android:ems="7"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:gravity="center"/>
+
+<EditText
+    android:id="@+id/down_left_edit_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:ems="7"
+    android:enabled="false"
+    android:layout_alignLeft="@id/up_left_edit_text"
+    android:layout_below="@id/up_left_edit_text"
+    android:layout_alignRight="@id/up_left_edit_text"
+    android:gravity="center" />
+
+<EditText
+    android:id="@+id/down_right_edit_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:ems="7"
+    android:enabled="false"
+    android:layout_alignLeft="@id/up_right_edit_text"
+    android:layout_alignRight="@id/up_right_edit_text"
+    android:layout_below="@id/up_right_edit_text"
+    android:gravity="center" />
+
+    <Button
+        android:id="@+id/sum_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/down_left_edit_text"
+        android:layout_below="@id/down_left_edit_text"
+        android:layout_alignRight="@id/down_left_edit_text"
+        android:text="SUM" />
+
+    <Button
+        android:id="@+id/prod_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/down_right_edit_text"
+        android:layout_alignRight="@id/down_right_edit_text"
+        android:layout_below="@id/down_right_edit_text"
+        android:text="PROD" />
+
+</RelativeLayout>
+
