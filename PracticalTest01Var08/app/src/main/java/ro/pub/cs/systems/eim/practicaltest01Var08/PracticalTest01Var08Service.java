@@ -20,12 +20,13 @@ public class PracticalTest01Var08Service extends Service {
     private Random random = new Random();
     private Context context = null;
     private boolean isRunning = true;
+    int a, b,c, d;
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        int a = intent.getIntExtra("a", -1);
-        int b = intent.getIntExtra("b", -1);
-        int c = intent.getIntExtra("c", -1);
-        int d = intent.getIntExtra("d", -1);
+         a = intent.getIntExtra("a", -1);
+         b = intent.getIntExtra("b", -1);
+         c = intent.getIntExtra("c", -1);
+         d = intent.getIntExtra("d", -1);
 
         processingThread = new ProcessingThread(this, a, b,c,d);
         processingThread.start();
@@ -36,8 +37,8 @@ public class PracticalTest01Var08Service extends Service {
     private void sendMessage() {
         Intent intent = new Intent();
         intent.setAction(Constants.actionTypes[random.nextInt(Constants.actionTypes.length)]);
-  //      intent.putExtra(Constants.BROADCAST_RECEIVER_EXTRA,
-   //             new Date(System.currentTimeMillis()) + " " + a + " " + b);
+       intent.putExtra(Constants.BROADCAST_RECEIVER_EXTRA,
+               new Date(System.currentTimeMillis()) + " " + a + " " + b + " " + c + " " + d);
         context.sendBroadcast(intent);
     }
 

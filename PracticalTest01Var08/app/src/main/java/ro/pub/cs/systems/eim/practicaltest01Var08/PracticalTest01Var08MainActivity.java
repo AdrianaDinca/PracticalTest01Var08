@@ -56,6 +56,8 @@ public class PracticalTest01Var08MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), PracticalTest01Var08Service.class);
                         intent.putExtra("a", a);
                         intent.putExtra("b", b);
+                        intent.putExtra("c", c);
+                        intent.putExtra("d", d);
                         getApplicationContext().startService(intent);
                         serviceStatus = Constants.SERVICE_STARTED;
                     }
